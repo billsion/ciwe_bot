@@ -111,10 +111,13 @@ class TextType
         } else if (strtolower($message['type']) == 'share' && $message['app'] == '绝地求生：刺激战场') {
 
 
-            $username = null;
             foreach ($message['from']['MemberList'] as $_member) {
                 if ($_member['UserName'] == $message['raw']['FromUserName']) {
                     $username = $_member['NickName'];
+                    break;
+                } if ($_member['NickName'] == $message['sender']['NickName']) {
+                    $username = $message['sender']['NickName'];
+                    break;
                 }
             }
 
