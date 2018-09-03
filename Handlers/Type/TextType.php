@@ -155,7 +155,7 @@ class TextType
                     //var_dump($message['from']['UserName']);
                     Text::send($message['from']['UserName'], "识别分享程序为" . $message['app'] . "\r\n" .
                         "---------------------------
-                        场次: 0x345sdfa890sdf
+                        场次: 0x345dfa890df
                         token: 100
                         游戏名次:
                         1. 张伟杰 淘汰 5 人
